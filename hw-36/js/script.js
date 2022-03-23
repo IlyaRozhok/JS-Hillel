@@ -2,7 +2,6 @@
     const cache = new Map();
 
     const caching = {
-        cache: new Map(),
         index: 0,
 
         plus(a, b) {
