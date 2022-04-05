@@ -1,7 +1,3 @@
-// Студен должен наследоваться от класса Human
-// В класс Human нужно перенести все общие методы и свойства которые могут встречаться у других типов людей.
-// Не забывайте про сокрытие реализации, пользуйтесь приватными, защищенными и статическими свойствами.
-// Если нету, например статических свойств, придумайте какой-то свой метод, который должен будет работать как статический.
 class Human {
 
     constructor(name, surname, yearOfBirth) {
@@ -52,8 +48,8 @@ class Human {
 
 class Student extends Human {
 
-    constructor() {
-        super();
+    constructor(name, surname, yearOfBirth) {
+        super(name, surname, yearOfBirth);
         this.journal = {
             presents: new Array(10),
             grades: new Array(10)
@@ -126,8 +122,6 @@ class Student extends Human {
     }
 }
 
-const vasya = new Human('Vasya', 'Petrov', 1950) // vse norm
-const kolya = new Student('Vasya', 'Petrov', 1950) //Error
 
 
 
