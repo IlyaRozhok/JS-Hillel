@@ -6,12 +6,14 @@ class Human {
         this.age = yearOfBirth;
     }
 
+    #upToDate = 'Tue Apr 05 2022 15:45:52 GMT+0300';
+
     static ageDiff(person, anotherPerson) {
         const diff = `The age difference is ${Math.abs(person.age - anotherPerson.age)}`;
         if (person.age > anotherPerson.age) {
-            return `${person.firstName} older than ${anotherPerson.firstName}. ${diff}`
+            return `${person.firstName} older than ${anotherPerson.firstName}. ${diff}`;
         } else if (person.age === anotherPerson.age) {
-            return `${person.firstName} was born in the same year as ${anotherPerson.firstName}.`
+            return `${person.firstName} was born in the same year as ${anotherPerson.firstName}.`;
         } else return `${person.firstName} younger than ${anotherPerson.firstName}. ${diff}`;
     }
 
@@ -20,8 +22,8 @@ class Human {
     }
 
     set firstName(value) {
-        if (typeof value != 'string') throw new Error('Use only string data!')
-        if (value.length < 3 || value.length > 15) throw new Error('Invalid length of name')
+        if (typeof value != 'string') throw new Error('Use only string data!');
+        if (value.length < 3 || value.length > 15) throw new Error('Invalid length of name');
         return this._firstName = value;
     }
 
@@ -30,18 +32,18 @@ class Human {
     }
 
     set lastName(value) {
-        if (typeof value != 'string') throw new Error('Use only string data!')
-        if (value.length < 1 || value.length > 15) throw new Error('Invalid length of surname')
+        if (typeof value != 'string') throw new Error('Use only string data!');
+        if (value.length < 1 || value.length > 15) throw new Error('Invalid length of surname');
         return this._lastName = value;
     }
 
     get age() {
-        return this._age
+        return this._age;
     }
 
     set age(value) {
-        if (typeof value != 'number') throw new Error('Use only numbers!')
-        if ((value < 1900) || (value > 2022)) throw new Error('Wrong year of birth entered!')
+        if (typeof value != 'number') throw new Error('Use only numbers!');
+        if ((value < 1900) || (value > 2022)) throw new Error('Wrong year of birth entered!');
         return this._age = new Date().getFullYear() - value;
     }
 }
@@ -54,30 +56,30 @@ class Student extends Human {
             presents: new Array(10),
             grades: new Array(10)
         };
-    }
+    };
 
     present() {
         const index = this.journal.presents.findIndex((elem) => {
-            return typeof elem === 'undefined'
-        })
-        if (index < 0) throw new Error('Attendance list is full')
+            return typeof elem === 'undefined';
+        });
+        if (index < 0) throw new Error('Attendance list is full');
         this.journal.presents[index] = true;
     }
 
     absent() {
         const index = this.journal.presents.findIndex((elem) => {
             return typeof elem === 'undefined'
-        })
-        if (index < 0) throw new Error('Attendance list is full')
+        });
+        if (index < 0) throw new Error('Attendance list is full');
         this.journal.presents[index] = false;
     }
 
     mark(grade) {
         const index = this.journal.grades.findIndex((elem) => {
-            return typeof elem === 'undefined'
-        })
+            return typeof elem === 'undefined';
+        });
         if (index < 0) throw new Error('Grade list is full');
-        if (grade < 1 || grade > 10) throw new Error('Invalid grade')
+        if (grade < 1 || grade > 10) throw new Error('Invalid grade');
         this.journal.grades[index] = grade;
     }
 
@@ -87,7 +89,7 @@ class Student extends Human {
 
         function calcGrade() {
             const grades = this.journal.grades.reduce((accum, item) => {
-                if (!item) return
+                if (!item) return;
                 accum += item;
                 return accum;
             })
@@ -115,14 +117,9 @@ class Student extends Human {
         calcPresents.bind(this)();
 
         if ((averageGrade > 9) && (averagePresent > 0.9)) {
-            return 'Ути какой молодчинка!'
+            return 'Ути какой молодчинка!';
         } else if ((averageGrade > 9) || (averagePresent > 0.9)) {
-            return 'Норм, но можно лучше!'
-        } else return 'Редиска!'
+            return 'Норм, но можно лучше!';
+        } else return 'Редиска!';
     }
 }
-
-
-
-
-
