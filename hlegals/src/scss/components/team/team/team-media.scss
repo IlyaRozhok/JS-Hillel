@@ -1,0 +1,43 @@
+@include desktop-small {
+  .team {
+    &-item {
+      width: 29%;
+    }
+  }
+}
+
+@include desktop {
+  .team {
+    &-item {
+      width: 44%;
+    }
+  }
+}
+
+@include tablet {
+  .team {
+    &-item {
+      width: 42%;
+      &-arrow {
+        bottom: 36px;
+      }
+    }
+  }
+}
+@include mobile {
+  .team {
+    &-wrapper {
+    }
+    &-item {
+      width: 60%;
+      &-position h6 {
+        font-size: 12px;
+      }
+      &-arrow {
+        width: 26px;
+        bottom: -12px;
+        right: 0;
+      }
+    }
+  }
+}

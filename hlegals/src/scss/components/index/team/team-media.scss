@@ -1,0 +1,80 @@
+@include desktop-small {
+  .team {
+    .carousel-item-wrapper-descr .gradient-title {
+      font-size: 34px;
+    }
+  }
+};
+
+@include laptop {
+  .team {
+    .carousel-item-wrapper {
+      height: 435px;
+      &-descr .gradient-title {
+        font-size: 26px;
+      }
+      &-img img {
+        width: 346px;
+        height: 438px;
+      }
+    }
+  }
+};
+
+@include tablet {
+  .team {
+    .carousel-item-wrapper {
+     &-descr {
+       padding: 20px 20px 0 20px;
+       .gradient-title {
+         font-size: 26px;
+         line-height: 26px;
+       }
+     }
+      &-img img {
+        width: 250px;
+        height: 250px;
+        border-radius: 120px;
+        margin-left: 10px;
+        margin-top: 30px;
+      }
+    }
+  }
+};
+
+@include mobile {
+  .team {
+    .carousel-item-wrapper {
+      height: 500px;
+      position: relative;
+      &-descr {
+        padding: 20px 20px 0 20px;
+        .gradient-title {
+          font-size: 32px;
+          line-height: 37px;
+        }
+        .grey-subtitle {
+          position: absolute;
+          bottom: 55px;
+          left: 130px;
+        }
+        .grey-descr {
+          position: absolute;
+          bottom: 30px;
+          left: 130px;
+        }
+      }
+      &-img {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 120px;
+          margin: 0;
+        }
+      }
+    }
+  }
+};

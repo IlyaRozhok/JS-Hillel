@@ -1,0 +1,60 @@
+.team {
+  margin-top: 40px;
+  height: 537px;
+  padding: 5px;
+
+  .carousel {
+    &-inner {
+      //todo min-width: 1320px;
+    }
+
+    &-caption {
+      text-align: start;
+    }
+
+    &-item-wrapper {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      height: 500px;
+      background-color: $grey-bg;
+      border-radius: 12px;
+
+      &-img {
+        img {
+          display: block;
+          width: 413px;
+          border-radius: 12px 0 0 12px
+        }
+      }
+
+      &-descr {
+        padding: 40px 60px 0 40px;
+
+        .gradient-title {
+          font-size: 38px;
+        }
+
+        .grey-descr {
+          margin-top: 5px;
+        }
+
+        .grey-subtitle {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-indicators {
+      bottom: -55px;
+
+    }
+
+    &-dark .carousel-indicators [data-bs-target] {
+      @extend %carousel-indicators
+    }
+    &-dark .carousel-indicators [data-bs-target].active {
+      background-color: $active-regular;
+    }
+  }
+}

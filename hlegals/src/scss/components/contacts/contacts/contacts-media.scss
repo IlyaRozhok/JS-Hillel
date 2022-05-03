@@ -1,0 +1,38 @@
+@include desktop {
+  .contacts-form {
+    height: 640px;
+    button {
+      bottom: 20px;
+    }
+  }
+}
+
+@include desktop {
+  .contacts-info {
+    address a {
+      font-size: 18px;
+    }
+  }
+  .contacts-form {
+    width: 55%;
+  }
+}
+
+@include tablet {
+  .contacts {
+    padding-bottom: 40px;
+  }
+  .contacts-info {
+    width: 100%;
+  }
+  .contacts-form {
+    width: 100%;
+  }
+  .contacts-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+  }
+  .contacts-info-social {
+    margin-bottom: 40px;
+  }
+};
