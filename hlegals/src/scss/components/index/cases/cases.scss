@@ -1,0 +1,96 @@
+.cases {
+  padding-top: 40px;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    background-color: white;
+    width: 1328px;
+  }
+
+  .label {
+    color: $accent;
+    height: 57px;
+    padding-top: 20px;
+  }
+
+  &-item {
+    background-color: #F5F5FA;
+    margin: 1.5px;
+    padding: 0 20px;
+    &:hover {
+      background-color: #EDEDF7;
+    }
+
+    &-title {
+      color: $text-soft;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &-company {
+      font-size: 18px;
+      color: $grey-text;
+      margin-top: 20px;
+    }
+    &:nth-child(1) {
+      width: 32%;
+      height: 255px;
+      border-top-left-radius: 12px;
+      position: relative;
+
+      .cases-item-title {
+        margin: 48px 0 20px 0;
+      }
+      &:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 57px;
+        left: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      height: 255px;
+      width: 34%;
+      padding-top: 105px;
+    }
+
+    &:nth-child(3) {
+      height: 255px;
+      width: 32%;
+      border-top-right-radius: 12px;
+      padding-top: 105px;
+
+    }
+
+    &:nth-child(4) {
+      width: 24%;
+      height: 192px;
+      border-bottom-left-radius: 12px;
+      padding-top: 20px;
+    }
+
+    &:nth-child(5) {
+      width: 34%;
+      height: 192px;
+      padding-top: 76px;
+    }
+
+    &:nth-child(6) {
+      width: 40%;
+      height: 192px;
+      border-bottom-right-radius: 12px;
+      padding-top: 76px;
+    }
+
+    &-descr {
+      padding: 48px 20px 66px 0;
+    }
+  }
+}

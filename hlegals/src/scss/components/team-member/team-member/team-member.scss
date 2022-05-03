@@ -1,0 +1,56 @@
+.member {
+  padding: 150px 0 80px 0;
+  &-wrapper {
+    &-img {
+      max-width: 410px;
+      margin-right: 40px;
+      img {
+        border-radius: 12px;
+      }
+    }
+    &-info {
+      width: 55%;
+      &-header {
+        @extend %grey-bottom-separator;
+        margin-bottom: 30px;
+        &-contacts {
+          margin: 15px 0 10px 0;
+          a {
+            text-decoration: none;
+            color: $active-regular;
+            font-size: 16px;
+          }
+          &-position {
+            font-size: 16px;
+            color: $grey-text;
+
+          }
+          &-mail {
+            margin: 0 26px;
+          }
+        }
+      }
+      &-description {
+        &-text {
+          margin-bottom: 10px;
+          p {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 15px;
+          }
+        }
+        &-subheader {
+          margin: 30px 0 10px 0;
+          h2 {
+            color: $main;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

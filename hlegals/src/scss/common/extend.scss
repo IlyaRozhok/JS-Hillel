@@ -1,0 +1,151 @@
+@import "./mixin";
+%header-another {
+  .header__address a {
+    color: $grey-text;
+    font-weight: 400;
+  }
+
+  .header__contact a {
+    color: $grey-text;
+
+  }
+
+  .header__lang-switch > label > input:checked + span {
+    color: white;
+  }
+
+  .header__top-wrapper > div:not(:last-child):after {
+    background-color: $grey-text;
+  }
+
+  span {
+    color: $grey-text;
+  }
+
+  .header__top-wrapper > address:not(:last-child):after {
+    background-color: $grey-text;
+  }
+
+  .navs-link {
+    color: $active-regular;
+  }
+
+  .nav-item {
+    a {
+      position: relative;
+
+      &:hover {
+        color: $accent !important;
+
+        &:after {
+          content: '';
+          display: block;
+          height: 3px;
+          width: 100%;
+          background-color: $accent;
+          position: absolute;
+          left: 0;
+          top: 25px;
+        }
+      }
+    }
+  }
+}
+
+%footer-point {
+  & > div:not(:last-child) {
+    position: relative;
+    padding-right: 20px;
+
+    &:after {
+      @extend %header-point;
+      background-color: $grey-text;
+    }
+  }
+
+  & > address:not(:last-child) {
+    position: relative;
+    padding-right: 20px;
+  }
+
+  & > address:not(:last-child):after {
+    @extend %header-point;
+    background-color: $grey-text;
+
+  }
+}
+
+%header-point {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 11px;
+  right: 7.5px;
+}
+
+%services-active-separator {
+  background: $accent;
+  -webkit-background-clip: content;
+  -webkit-text-fill-color: transparent;
+}
+
+%grey-bottom-separator {
+  border-bottom: 4px solid $grey-separator;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+%grey-top-separator {
+  border-top: 4px solid $grey-separator;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+%services-tab-title {
+  background: $services-tab-title;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%title-bg-text {
+  background: $title-bg-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%carousel-indicators {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #D3EDFF;
+}
+
+%services-separator {
+  #v-pills-home-tab.navs-link.active::after {
+    @extend %services-active-separator;
+  }
+
+  #v-pills-profile-tab.navs-link.active::after {
+    @extend %services-active-separator;
+  }
+
+  #v-pills-messages-tab.navs-link.active::after {
+    @extend %services-active-separator;
+  }
+
+  #v-pills-settings-tab.navs-link.active::after {
+    @extend %services-active-separator;
+  }
+}
+
+%substrate {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+}

@@ -1,0 +1,47 @@
+@include laptop {
+  .header {
+    &__lang-switch > label > input:checked + span {
+      font-size: 11px;
+    }
+
+    &__lang-switch label span {
+      font-size: 11px;
+    }
+
+    .navbar-brand-logo {
+      width: 280px;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    .burger {
+      top: -5px;
+      right: 10px;
+      span {
+        background-color: $grey-text;
+      }
+    }
+    .navbar-brand-logo {
+      width: 200px !important;
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    padding: 15px 30px;
+    .burger {
+      top: 37px;
+      right: -12px;
+    }
+  }
+  .dropdown-menu {
+    width: 107% !important;
+    &[data-bs-popper] {
+      top: 75px;
+      left: -3.5%;
+    }
+  }
+}

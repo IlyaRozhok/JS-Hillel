@@ -1,0 +1,110 @@
+@include laptop {
+  .footer {
+    padding: 20px 15px 40px 15px;
+    &-address h5 {
+      font-size: 13px;
+    }
+    &-look-map {
+      font-size: 11px;
+    }
+    &-phone a {
+      font-size: 14px;
+    }
+    &-email a {
+      font-size: 14px;
+    }
+    &-tov {
+      font-size: 14px;
+    }
+  }
+};
+
+@include tablet {
+  .footer {
+    padding-top: 20px;
+    height: 240px;
+    &-contacts {
+      width: 100%;
+      &-top {
+        justify-content: center;
+      }
+      &-bottom {
+        justify-content: center;
+      }
+    }
+    &-tov {
+      top: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+    }
+  }
+};
+
+@include mobile {
+  .footer {
+    height: 300px;
+    &-address {
+      padding: 0;
+      h5 {
+        font-size: 16px;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    &-phone {
+      //a {
+      //  color: $main;
+      //}
+    }
+    &-look-map {
+      a {
+        font-size: 12px;
+      }
+    }
+    &-fb {
+      margin: 20px 0;
+    }
+    &-tov {
+      top: 190px;
+      font-size: 16px;
+      text-align: center;
+      width: 270px;
+    }
+      &-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-top {
+          flex-direction: column;
+          align-items: center;
+          & > address:not(:last-child) {
+            padding: 0;
+          }
+        & > address:not(:last-child):after {
+          display: none;
+        }
+        }
+        &-bottom {
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+          & > div:not(:last-child) {
+            padding: 0;
+            &:after {
+              display: none;
+            }
+          }
+          & > address:not(:last-child) {
+            padding: 0;
+            &:after {
+              display: none;
+            }
+          }
+
+        }
+      }
+
+  }
+}

@@ -1,0 +1,58 @@
+.about-law {
+  position: relative;
+  padding-bottom: 100px;
+  &-wrapper {
+    padding: 170px 0 100px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  &-description {
+    max-width: 60%;
+    &-title {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 42px;
+        @extend %title-bg-text;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+    &-subtitle {
+      p {
+        font-size: 21px;
+        line-height: 30px;
+      }
+    }
+  }
+  &-achievements {
+    padding-left: 70px;
+    &-item {
+      margin-bottom: 40px;
+      position: relative;
+      &:nth-child(3) {
+        &:before {
+          content: '';
+          display: block;
+          height: 277px;
+          width: 4px;
+          background-color: $grey-separator;
+          left: -20px;
+          bottom: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+  &-team {
+    background: url('../images/jpeg/team.jpg') center center/cover no-repeat;
+    height: 438px;
+    position: relative;
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

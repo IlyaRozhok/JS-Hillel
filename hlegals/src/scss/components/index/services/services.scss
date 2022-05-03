@@ -1,0 +1,153 @@
+.services {
+  position: relative;
+  min-height: 1374px;
+  background: $services-bg;
+  padding: 80px 0 60px 0;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+
+  &__wrapper {
+    padding-left: 10px;
+
+    .nav {
+      width: 530px;
+      margin-right: 80px;
+
+      .active {
+        @extend %services-tab-title;
+      }
+
+      button {
+        background-color: transparent;
+      }
+    }
+
+    .navs-link {
+      margin: 10px 0;
+      text-align: end;
+      line-height: 55px;
+      font-size: 42px;
+      font-weight: bold;
+      color: $grey-text;
+      border: none;
+      position: relative;
+
+      &:hover {
+        @extend %services-tab-title;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 100px;
+        background-color: $grey-separator;
+        position: absolute;
+        right: -40px;
+        top: 0;
+      }
+    };
+
+    @extend %services-separator;
+
+    .tab-content {
+      color: white;
+
+      h4 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 21px;
+        line-height: 30px;
+        font-weight: 300;
+      }
+
+      .active {
+        max-width: 615px;
+      }
+    }
+    &-carousel {
+
+      &-label {
+        @extend %services-tab-title;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+      &-title {
+        font-size: 22px;
+        line-height: 26px;
+        color: #FFFFFF;
+      }
+      &-subtitle {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 300;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__better-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+
+  &__better {
+    &-header {
+      margin-top: 100px;
+      padding-left: 27px;
+    }
+
+    &-item {
+      width: 380px;
+      margin: 70px 25px 0 25px;
+
+      &-title {
+        margin-top: 20px;
+        a {
+          font-size: 24px;
+          line-height: 28px;
+          color: $active-regular;
+          text-decoration: none;
+          &:hover {
+            @extend %title-bg-text;
+          }
+        }
+      }
+
+      &-subtitle {
+        font-size: 18px;
+        line-height: 26px;
+        color: white;
+        font-weight: 300;
+        margin-top: 15px;
+      }
+    }
+  }
+  .carousel-indicators {
+    bottom: -55px;
+    & > [data-bs-target] {
+      @extend %carousel-indicators;
+    }
+    .active {
+      background-color: $active-regular;
+    }
+  }
+
+  &__substrate-1 {
+    background-color: $substrate1;
+    bottom: -10px;
+    width: 97%;
+    @extend %substrate
+  }
+
+  &__substrate-2 {
+    background-color: $substrate2;
+    bottom: -20px;
+    width: 93%;
+    @extend %substrate
+  }
+}  ;
+

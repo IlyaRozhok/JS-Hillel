@@ -1,0 +1,40 @@
+@include desktop {
+  .member {
+    &-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-info {
+        width: 100%;
+        &-header {
+          &-name {
+            margin-top: 30px;
+          }
+          &-header-contacts {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .member {
+    .gradient-title {
+      font-size: 31px;
+    }
+    &-wrapper {
+      &-info {
+        width: 100%;
+        &-header {
+          &-contacts {
+            flex-direction: column;
+            &-mail {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
